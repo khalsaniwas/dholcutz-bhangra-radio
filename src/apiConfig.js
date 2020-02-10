@@ -1,7 +1,7 @@
 let apiUrl
 const apiUrls = {
-  production: 'https://demo.azuracast.com/api',
-  development: 'https://demo.azuracast.com/api'
+  production: 'https://beta.dholcutzradio.com/api',
+  development: 'https://beta.dholcutzradio.com/api'
 }
 
 if (window.location.hostname === 'localhost') {
@@ -10,4 +10,7 @@ if (window.location.hostname === 'localhost') {
   apiUrl = apiUrls.production
 }
 
-export default apiUrl
+export default {
+  apiUrl,
+  token: process.env.REACT_APP_AZURACAST_TOKEN
+}
