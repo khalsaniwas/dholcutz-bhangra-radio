@@ -5,6 +5,8 @@ import apiConfig from '../../apiConfig'
 import { Link } from 'react-router-dom'
 import Nav from 'react-bootstrap/Nav'
 import Search from './Search'
+import Button from 'react-bootstrap/Button'
+import './SongList.css';
 
 const SongList = props => {
   const [songList, setSongList] = useState([])
@@ -41,8 +43,13 @@ const SongList = props => {
 
   const propertiesJsx = searchResults.map(song => (
     <ListGroup.Item variant="light" key={song.id}>
-      <div>
-        <Nav.Link href={`#songList/${song.id}`}> {song.artist} - {song.title}</Nav.Link>{song.length_text}
+      <div className="song-item">
+        <div className="song-info">
+          <Nav.Link href={`#songList/${song.id}`}> {song.artist} - {song.title}</Nav.Link>
+          <span className="song-length">{song.length_text}</span>
+        </div>
+        
+        <Button className="request-button">request</Button>
       </div>
 
     </ListGroup.Item>
@@ -56,6 +63,7 @@ const SongList = props => {
         handleChange={handleChange} />
       <ListGroup>
         {propertiesJsx}
+        
       </ListGroup>
     </div>
   )

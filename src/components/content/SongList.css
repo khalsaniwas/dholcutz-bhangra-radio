@@ -2,3 +2,12 @@
   display: inline;
   padding: .5rem 1rem;
 }
+
+.song-item {
+  text-align: left;
+}
+
+.song-info {
+  width: 500px;
+  float: left;
+}
