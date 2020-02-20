@@ -13,18 +13,14 @@ const SongList = props => {
 
   useEffect(() => {
     axios({
-      url: `${apiConfig.apiUrl}/station/1/files`,
-      method: 'GET',
-      headers: {
-        Authorization: `Bearer ${apiConfig.token}`
-      }
+      url: `${apiConfig.apiUrl}/station/1/requests`,
+      method: 'GET'
     })
       .then(response => {
         console.log(response.data)
         setSongList(response.data)
         setSearchResults(response.data)
       })
-      .then(() => props.alert({ heading: 'Success', message: 'All your songList', variant: 'success' }))
       .catch(console.error)
   }, [])
 
@@ -36,20 +32,20 @@ const SongList = props => {
   const [searchResults, setSearchResults] = React.useState([]);
   React.useEffect(() => {
     const results = songList.filter(song =>
-      song.title.toLowerCase().includes(searchTerm)
+      song.song.title.toLowerCase().includes(searchTerm) || song.song.artist.toLowerCase().includes(searchTerm)
     );
     setSearchResults(results);
   }, [searchTerm]);
 
   const propertiesJsx = searchResults.map(song => (
-    <ListGroup.Item variant="light" key={song.id}>
+    <ListGroup.Item variant="dark" key={song.song.id}>
       <div className="song-item">
         <div className="song-info">
-          <Nav.Link href={`#songList/${song.id}`}> {song.artist} - {song.title}</Nav.Link>
-          <span className="song-length">{song.length_text}</span>
+          <Nav.Link href={`#songList/${song.song.id}`}> {song.song.artist} - {song.song.title}</Nav.Link>
+          <span className="song-length">{song.song.length_text}</span>
         </div>
         
-        <Button className="request-button">request</Button>
+        <Button className="request-button" variant="success">request</Button>
       </div>
 
     </ListGroup.Item>
