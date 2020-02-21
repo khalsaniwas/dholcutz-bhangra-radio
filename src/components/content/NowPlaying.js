@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiConfig from '../../apiConfig'
+import Player from './Player.js'
+import './NowPlaying.css'
 
 const NowPlaying = props => {
   const [nowPlaying, setNowPlaying] = useState(null)
@@ -11,7 +13,10 @@ const NowPlaying = props => {
     axios({ url: `${apiConfig.apiUrl}/nowplaying/1`,
       method: 'GET',
     })
-      .then(res => setNowPlaying(res.data.now_playing))
+      .then(res => {
+        setNowPlaying(res.data)
+        console.log(res.data)
+      })
       .catch(console.error)
   }, [])
 
@@ -21,7 +26,8 @@ const NowPlaying = props => {
 
   return (
     <div className="jumbotron text-center">
-      <h4>{nowPlaying.song.text}</h4>
+      <h4>Listeners: {nowPlaying.listeners.current}</h4>
+      <Player />
     </div>
   )
 }
