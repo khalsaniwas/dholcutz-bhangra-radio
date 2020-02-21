@@ -5,7 +5,7 @@ import apiConfig from '../../apiConfig'
 import { Link } from 'react-router-dom'
 import Nav from 'react-bootstrap/Nav'
 import Search from './Search'
-import Button from 'react-bootstrap/Button'
+import Request from './Request'
 import './SongList.css';
 
 const SongList = props => {
@@ -13,7 +13,7 @@ const SongList = props => {
 
   useEffect(() => {
     axios({
-      url: `${apiConfig.apiUrl}/station/1/requests`,
+      url: `${apiConfig.apiUrl}/station/${apiConfig.stationId}/requests`,
       method: 'GET'
     })
       .then(response => {
@@ -44,8 +44,9 @@ const SongList = props => {
           <Nav.Link href={`#songList/${song.song.id}`}> {song.song.artist} - {song.song.title}</Nav.Link>
           <span className="song-length">{song.song.length_text}</span>
         </div>
+        <Request 
+          requestId={song.request_id} />
         
-        <Button className="request-button" variant="success">request</Button>
       </div>
 
     </ListGroup.Item>

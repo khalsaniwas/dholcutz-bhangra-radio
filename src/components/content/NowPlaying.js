@@ -10,7 +10,7 @@ const NowPlaying = props => {
   
 
   useEffect(() => {
-    axios({ url: `${apiConfig.apiUrl}/nowplaying/1`,
+    axios({ url: `${apiConfig.apiUrl}/nowplaying/${apiConfig.stationId}`,
       method: 'GET',
     })
       .then(res => {
@@ -26,8 +26,10 @@ const NowPlaying = props => {
 
   return (
     <div className="jumbotron text-center">
-      <h4>Listeners: {nowPlaying.listeners.current}</h4>
       <Player />
+      <h6>Listeners: { nowPlaying.listeners.current }</h6>
+      <h6>Next Song: { nowPlaying.playing_next.song.text }</h6>
+      
     </div>
   )
 }
