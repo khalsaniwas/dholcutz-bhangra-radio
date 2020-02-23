@@ -10,7 +10,7 @@ const SongHistory = props => {
     <ol>
       <h4>Song History</h4>
       {props.history.map(song => 
-          <li>{song.song.text}
+          <li key={song.sh_id}>{song.song.text}
           </li>
       )} 
     </ol>
