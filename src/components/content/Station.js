@@ -29,7 +29,6 @@ const Station = props => {
         station={station} />
       <SongHistory 
         history={station.song_history} />
-      
     </div>
   )}
 

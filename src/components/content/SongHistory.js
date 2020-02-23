@@ -7,12 +7,13 @@ const SongHistory = props => {
   }
 
   return (
-    <div>
+    <ol>
       <h4>Song History</h4>
       {props.history.map(song => 
-        <div>{song.song.text}</div>
+          <li>{song.song.text}
+          </li>
       )} 
-    </div>
+    </ol>
   )
 
 }
