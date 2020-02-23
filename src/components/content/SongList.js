@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import ListGroup from 'react-bootstrap/ListGroup'
 import axios from 'axios'
 import apiConfig from '../../apiConfig'
-import Nav from 'react-bootstrap/Nav'
 import Search from './Search'
 import Request from './Request'
 import './SongList.css';
@@ -34,7 +33,7 @@ const SongList = props => {
       song.song.title.toLowerCase().includes(searchTerm) || song.song.artist.toLowerCase().includes(searchTerm)
     );
     setSearchResults(results);
-  }, [searchTerm]);
+  }, [searchTerm, songList]);
 
   const propertiesJsx = searchResults.map(song => (
     <ListGroup.Item variant="dark" key={song.song.id}>

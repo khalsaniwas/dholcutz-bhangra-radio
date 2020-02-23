@@ -6,6 +6,8 @@ import SongHistory from './SongHistory'
 
 const Station = props => {
   const [station, setStation] = useState(null)
+
+  const [trigger, setTrigger] = useState(0)
   
 
   useEffect(() => {
@@ -14,10 +16,15 @@ const Station = props => {
     })
       .then(res => {
         setStation(res.data)
+
+        setTimeout( () => {
+          setTrigger(trigger+1)
+        }, res.data.now_playing.remaining*1000)
+        
         console.log(res.data)
       })
       .catch(console.error)
-  }, [])
+  }, [trigger])
 
   if(!station) {
     return <p>Loading station...</p>

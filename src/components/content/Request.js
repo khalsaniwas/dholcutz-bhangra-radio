@@ -22,7 +22,7 @@ const Request = props => {
 
 
   return (
-    requestMessage == "" ?
+    requestMessage === "" ?
       <Button
         className="request-button"
         variant="success"
