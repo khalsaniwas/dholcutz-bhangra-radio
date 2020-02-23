@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dholcutz-bhangra-radio/static/css/main.6a8b59e1.chunk.css",
+    "main.js": "/dholcutz-bhangra-radio/static/js/main.9de30e9c.chunk.js",
+    "main.js.map": "/dholcutz-bhangra-radio/static/js/main.9de30e9c.chunk.js.map",
+    "runtime-main.js": "/dholcutz-bhangra-radio/static/js/runtime-main.bde869dd.js",
+    "runtime-main.js.map": "/dholcutz-bhangra-radio/static/js/runtime-main.bde869dd.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/dholcutz-bhangra-radio/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.9b7baa14.chunk.js": "/dholcutz-bhangra-radio/static/js/2.9b7baa14.chunk.js",
+    "static/js/2.9b7baa14.chunk.js.map": "/dholcutz-bhangra-radio/static/js/2.9b7baa14.chunk.js.map",
+    "index.html": "/dholcutz-bhangra-radio/index.html",
+    "precache-manifest.ce523a6b5e24771270cc60a94a04058e.js": "/dholcutz-bhangra-radio/precache-manifest.ce523a6b5e24771270cc60a94a04058e.js",
+    "service-worker.js": "/dholcutz-bhangra-radio/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/dholcutz-bhangra-radio/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.6a8b59e1.chunk.css.map": "/dholcutz-bhangra-radio/static/css/main.6a8b59e1.chunk.css.map",
+    "static/js/2.9b7baa14.chunk.js.LICENSE.txt": "/dholcutz-bhangra-radio/static/js/2.9b7baa14.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bde869dd.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.9b7baa14.chunk.js",
+    "static/css/main.6a8b59e1.chunk.css",
+    "static/js/main.9de30e9c.chunk.js"
+  ]
+}
