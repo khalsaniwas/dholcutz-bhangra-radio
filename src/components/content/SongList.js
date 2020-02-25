@@ -18,7 +18,6 @@ const SongList = props => {
       method: 'GET'
     })
       .then(response => {
-        console.log(response.data)
         setSongList(response.data)
         setSearchResults(response.data)
       })
@@ -36,6 +35,7 @@ const SongList = props => {
       song.song.title.toLowerCase().includes(searchTerm) || song.song.artist.toLowerCase().includes(searchTerm)
     );
     setSearchResults(results);
+    setActivePage(1);
   }, [searchTerm, songList]);
 
   
@@ -70,8 +70,8 @@ const SongList = props => {
 
       <Pagination
           activePage={activePage}
-          itemsCountPerPage={10}
-          totalItemsCount={450}
+          itemsCountPerPage={songsPerPage}
+          totalItemsCount={searchResults.length}
           pageRangeDisplayed={5}
           onChange={setActivePage}
           itemClass="page-item"
