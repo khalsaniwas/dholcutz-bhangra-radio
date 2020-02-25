@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import ListGroup from 'react-bootstrap/ListGroup'
+import Pagination from "react-js-pagination";
 import axios from 'axios'
 import apiConfig from '../../apiConfig'
 import Search from './Search'
 import Request from './Request'
 import './SongList.css';
+import paginate from '../../paginate'
 
 const SongList = props => {
   const [songList, setSongList] = useState([])
+  const [activePage, setActivePage] = useState(1)
 
   useEffect(() => {
     axios({
@@ -35,7 +38,10 @@ const SongList = props => {
     setSearchResults(results);
   }, [searchTerm, songList]);
 
-  const propertiesJsx = searchResults.map(song => (
+  
+  const songsPerPage = 20;
+  const paginatedResults = paginate(searchResults, activePage, songsPerPage);
+  const propertiesJsx = paginatedResults.map(song => (
     <ListGroup.Item variant="dark" key={song.song.id}>
       <div className="song-item">
         <div className="song-info">
@@ -53,15 +59,32 @@ const SongList = props => {
   return (
     <div>
       <h1>Song List</h1>
+
       <Search
         searchTerm={searchTerm}
         handleChange={handleChange} />
+
       <ListGroup>
         {propertiesJsx}
-        
       </ListGroup>
+
+      <Pagination
+          activePage={activePage}
+          itemsCountPerPage={10}
+          totalItemsCount={450}
+          pageRangeDisplayed={5}
+          onChange={setActivePage}
+          itemClass="page-item"
+          linkClass="page-link"
+        />
+
     </div>
   )
+
+  // handlePageChange(pageNumber) {
+  //   console.log(`active page is ${pageNumber}`);
+  //   this.setState({activePage: pageNumber});
+  // }
 }
 
 export default SongList
