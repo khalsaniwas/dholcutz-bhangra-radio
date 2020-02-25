@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dholcutz-bhangra-radio/precache-manifest.ce523a6b5e24771270cc60a94a04058e.js"
+  "/dholcutz-bhangra-radio/precache-manifest.d15696b7810729c393ad50c8ead7f4a4.js"
 );
 
 self.addEventListener('message', (event) => {
