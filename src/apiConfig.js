@@ -12,6 +12,5 @@ if (window.location.hostname === 'localhost') {
 
 export default {
   apiUrl,
-  token: process.env.REACT_APP_AZURACAST_TOKEN,
   stationId: 1
 }

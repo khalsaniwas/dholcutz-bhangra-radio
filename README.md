@@ -1,9 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Setup
-
-Add `REACT_APP_AZURACAST_TOKEN` from Azuracast API keys to .env.local file. It is used in `apiConfig.js`
-
 ## Available Scripts
 
 In the project directory, you can run:
