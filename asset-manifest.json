@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/dholcutz-bhangra-radio/static/css/main.6a8b59e1.chunk.css",
-    "main.js": "/dholcutz-bhangra-radio/static/js/main.69cf488c.chunk.js",
-    "main.js.map": "/dholcutz-bhangra-radio/static/js/main.69cf488c.chunk.js.map",
+    "main.css": "/dholcutz-bhangra-radio/static/css/main.84e92bcc.chunk.css",
+    "main.js": "/dholcutz-bhangra-radio/static/js/main.1a8d8f17.chunk.js",
+    "main.js.map": "/dholcutz-bhangra-radio/static/js/main.1a8d8f17.chunk.js.map",
     "runtime-main.js": "/dholcutz-bhangra-radio/static/js/runtime-main.bde869dd.js",
     "runtime-main.js.map": "/dholcutz-bhangra-radio/static/js/runtime-main.bde869dd.js.map",
     "static/css/2.47e06e2e.chunk.css": "/dholcutz-bhangra-radio/static/css/2.47e06e2e.chunk.css",
-    "static/js/2.a41da25e.chunk.js": "/dholcutz-bhangra-radio/static/js/2.a41da25e.chunk.js",
-    "static/js/2.a41da25e.chunk.js.map": "/dholcutz-bhangra-radio/static/js/2.a41da25e.chunk.js.map",
+    "static/js/2.7037c289.chunk.js": "/dholcutz-bhangra-radio/static/js/2.7037c289.chunk.js",
+    "static/js/2.7037c289.chunk.js.map": "/dholcutz-bhangra-radio/static/js/2.7037c289.chunk.js.map",
     "index.html": "/dholcutz-bhangra-radio/index.html",
-    "precache-manifest.00c6de77c544795ec13841f01622b0e1.js": "/dholcutz-bhangra-radio/precache-manifest.00c6de77c544795ec13841f01622b0e1.js",
+    "precache-manifest.b19704020ac22c653c757bd3050daeb7.js": "/dholcutz-bhangra-radio/precache-manifest.b19704020ac22c653c757bd3050daeb7.js",
     "service-worker.js": "/dholcutz-bhangra-radio/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/dholcutz-bhangra-radio/static/css/2.47e06e2e.chunk.css.map",
-    "static/css/main.6a8b59e1.chunk.css.map": "/dholcutz-bhangra-radio/static/css/main.6a8b59e1.chunk.css.map",
-    "static/js/2.a41da25e.chunk.js.LICENSE.txt": "/dholcutz-bhangra-radio/static/js/2.a41da25e.chunk.js.LICENSE.txt"
+    "static/css/main.84e92bcc.chunk.css.map": "/dholcutz-bhangra-radio/static/css/main.84e92bcc.chunk.css.map",
+    "static/js/2.7037c289.chunk.js.LICENSE.txt": "/dholcutz-bhangra-radio/static/js/2.7037c289.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bde869dd.js",
     "static/css/2.47e06e2e.chunk.css",
-    "static/js/2.a41da25e.chunk.js",
-    "static/css/main.6a8b59e1.chunk.css",
-    "static/js/main.69cf488c.chunk.js"
+    "static/js/2.7037c289.chunk.js",
+    "static/css/main.84e92bcc.chunk.css",
+    "static/js/main.1a8d8f17.chunk.js"
   ]
 }
