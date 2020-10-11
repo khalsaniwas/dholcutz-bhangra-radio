@@ -20,7 +20,7 @@ const SongHistory = props => {
         className="show-history"
         variant="dark"
         onClick={handleClick}
-      >Song History</Button>
+      >{ isOpen ? "➕" : "➖" } Song History</Button>
       <ol className={ isOpen ? "show" : "hide" }>
         {props.history.map(song => 
             <li key={song.sh_id}>{song.song.text}
