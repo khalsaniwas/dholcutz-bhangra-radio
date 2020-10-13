@@ -2,6 +2,7 @@ import React from 'react'
 import Button from 'react-bootstrap/Button'
 import axios from 'axios'
 import apiConfig from '../../apiConfig'
+import './Request.css';
 
 
 const Request = props => {
@@ -18,8 +19,6 @@ const Request = props => {
       })
       .catch(console.error)
   }
-
-
 
   return (
     requestMessage === "" ?
