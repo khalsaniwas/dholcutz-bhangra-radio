@@ -1,3 +1,7 @@
 .hide {
   display: none;
 }
+
+.song-history-row {
+  padding-bottom: 1rem;
+}

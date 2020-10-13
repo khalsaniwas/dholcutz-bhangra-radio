@@ -16,7 +16,7 @@ const SongHistory = props => {
   }
 
   return (
-    <Row>
+    <Row className="song-history-row">
       <Col>
         <Button
           className="show-history"
