@@ -8,6 +8,9 @@ import Request from './Request'
 import './SongList.css';
 import paginate from '../../paginate'
 
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 const SongList = props => {
   const [songList, setSongList] = useState([])
   const [activePage, setActivePage] = useState(1)
@@ -58,11 +61,16 @@ const SongList = props => {
 
   return (
     <div>
-      <h1>Song List</h1>
-
-      <Search
-        searchTerm={searchTerm}
-        handleChange={handleChange} />
+      <Row>
+        <Col>
+          <h1>Song List</h1>
+        </Col>
+        <Col>
+          <Search
+            searchTerm={searchTerm}
+            handleChange={handleChange} />
+        </Col>
+      </Row>
 
       <ListGroup>
         {propertiesJsx}

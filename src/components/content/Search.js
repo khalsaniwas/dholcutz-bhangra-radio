@@ -7,7 +7,7 @@ import React from 'react'
 const SearchSong = props => {
 
   return (
-    <Form inline>
+    <Form inline className="float-right">
       <FormControl
         type="text"
         placeholder="Search"
