@@ -8,6 +8,9 @@ import Request from './Request'
 import './SongList.css';
 import paginate from '../../paginate'
 
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 const SongList = props => {
   const [songList, setSongList] = useState([])
   const [activePage, setActivePage] = useState(1)
@@ -44,6 +47,7 @@ const SongList = props => {
   const propertiesJsx = paginatedResults.map(song => (
     <ListGroup.Item variant="dark" key={song.song.id}>
       <div className="song-item">
+        <img src={song.song.art} className="song-art" alt="song art" />
         <div className="song-info">
           {song.song.text}<br />
           <span className="song-album">{song.song.album}</span>
@@ -58,11 +62,16 @@ const SongList = props => {
 
   return (
     <div>
-      <h1>Song List</h1>
-
-      <Search
-        searchTerm={searchTerm}
-        handleChange={handleChange} />
+      <Row>
+        <Col>
+          <h1>Song List</h1>
+        </Col>
+        <Col>
+          <Search
+            searchTerm={searchTerm}
+            handleChange={handleChange} />
+        </Col>
+      </Row>
 
       <ListGroup>
         {propertiesJsx}

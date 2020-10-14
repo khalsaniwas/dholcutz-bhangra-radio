@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './SongHistory.css';
 import Button from 'react-bootstrap/Button'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const SongHistory = props => {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,22 +16,21 @@ const SongHistory = props => {
   }
 
   return (
-
-    <div>
-      <Button
-        className="show-history"
-        variant="dark"
-        onClick={handleClick}
-      >Song History</Button>
-      <ol className={ isOpen ? "show" : "hide" }>
-        {props.history.map(song => 
-            <li key={song.sh_id}>{song.song.text}
-            </li>
-        )} 
-      </ol>
-
-    </div>
-    
+    <Row className="song-history-row">
+      <Col>
+        <Button
+          className="show-history"
+          variant="dark"
+          onClick={handleClick}
+          >{ isOpen ? "➕" : "➖" } Song History</Button>
+        <ol className={ isOpen ? "show" : "hide" }>
+          {props.history.map(song => 
+              <li key={song.sh_id}>{song.song.text}
+              </li>
+          )} 
+        </ol>
+      </Col>
+    </Row>
   )
 
 }

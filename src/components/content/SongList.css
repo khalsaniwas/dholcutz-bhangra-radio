@@ -10,3 +10,9 @@
 .song-album {
   font-size: small;
 }
+
+.song-art {
+  width: 5rem;
+  margin-right: .75rem;
+  float: left;
+}
