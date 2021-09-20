@@ -6,7 +6,7 @@ import './Request.css';
 
 const RequestMessage = ({requestMessage }) => {
   return (
-  <div className={requestMessage.success ? "alert alert-success" : "alert alert-danger"}>
+  <div className={requestMessage.success ? "alert alert-dark" : "alert alert-dark"}>
     <strong>{ requestMessage.message }</strong>
     { requestMessage.reason ? <span className="reason"><br />{ requestMessage.reason }</span> : "" }
   </div> )
@@ -22,13 +22,13 @@ const Request = props => {
       .then(res => {
         setRequestMessage({
           success: true,
-          message: "✔️ " + res.data.message,
+          message: "request submitted" + res.data.message,
           reason: "",
         })
       }, (err) => {
         setRequestMessage({
           success: false,
-          message: "❌ Request failed!",
+          message: "you can only submit one song",
           reason: err.response.data.message,
         })
       })
