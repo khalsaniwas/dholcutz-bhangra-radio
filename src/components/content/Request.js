@@ -22,13 +22,13 @@ const Request = props => {
       .then(res => {
         setRequestMessage({
           success: true,
-          message: "request submitted" + res.data.message,
+          message: "success" + res.data.message,
           reason: "",
         })
       }, (err) => {
         setRequestMessage({
           success: false,
-          message: "you can only submit one song",
+          message: "request failed",
           reason: err.response.data.message,
         })
       })
