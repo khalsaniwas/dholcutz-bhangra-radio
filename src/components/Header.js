@@ -7,7 +7,7 @@ function Header() {
     <header className="App-header">
 
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand>DholCutz Bhangra Radio</Navbar.Brand>
+        <Navbar.Brand>Boston Punjabi Radio</Navbar.Brand>
       </Navbar>
 
     </header>
